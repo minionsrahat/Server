@@ -125,7 +125,7 @@ async function run() {
             res.send(await result.toArray())
         })
 
-        app.get('/readmyorders', verifyRequest,async (req, res) => {
+        app.get('/readmyorders',async (req, res) => {
             const email = req.query.email
             let result;
             if (email) {
